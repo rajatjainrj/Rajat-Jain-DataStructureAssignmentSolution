@@ -33,13 +33,7 @@ public class BSTreeToSkewedTree {
         rightSkewedRoot = null;
     }
 
-    public static void main(String[] args) {
-        BSTreeToSkewedTree bsTreeToSkewedTree = new BSTreeToSkewedTree();
-        Node rightSkewed = bsTreeToSkewedTree.convertBstToRightSkewed();
-        bsTreeToSkewedTree.printRightSkewedTree(rightSkewed);
-    }
-
-    private Node convertBstToRightSkewed() {
+    public Node convertBstToRightSkewed() {
         ArrayList<Integer> inOrderBst = convertBstToInOrderList();
         if(inOrderBst.isEmpty()){
             return rightSkewedRoot;

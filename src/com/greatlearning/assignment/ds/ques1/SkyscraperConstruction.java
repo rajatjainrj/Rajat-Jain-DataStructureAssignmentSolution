@@ -34,23 +34,14 @@ public class SkyscraperConstruction {
         floorQueue.printQueue();
     }
 
-    public static void main(String[] args) {
-        System.out.println("Enter the total no of floors in the building");
-        Scanner scanner = new Scanner(System.in);
-        int totalFloors = scanner.nextInt();
-        SkyscraperConstruction skyscraperConstruction = new SkyscraperConstruction(totalFloors);
-        skyscraperConstruction.inputFloorDeliveryByDay(scanner);
-        skyscraperConstruction.processAndShowOrderOfConstruction();
-    }
-
-    private void inputFloorDeliveryByDay(Scanner scanner) {
+    public void inputFloorDeliveryByDay(Scanner scanner) {
         for (int i = 0; i < totalFloors; i++) {
             System.out.println("Enter the floor size given on day - " + (i + 1));
             floorDelivery.add(scanner.nextInt());
         }
     }
 
-    private void processAndShowOrderOfConstruction() {
+    public void processAndShowOrderOfConstruction() {
         System.out.println("The order of construction is as follows - ");
 
         for (int i = 0; i < totalFloors; i++) {
